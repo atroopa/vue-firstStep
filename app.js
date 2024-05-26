@@ -1,6 +1,8 @@
 const app = Vue.createApp({
     data() {
         return {
+            x: 0,
+            y: 0,
             showBooks: true,
             title: "bof koor",
             author: "sadegh hedayat",
@@ -12,8 +14,13 @@ const app = Vue.createApp({
             this.showBooks = !this.showBooks 
         },
 
-        handleEvent(){
-            console.log("event")
+        handleEvent(e){
+            console.log(e.type)
+        },
+
+        handleMouseMove(e){
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     },
 });
