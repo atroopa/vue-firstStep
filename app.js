@@ -10,6 +10,10 @@ const app = Vue.createApp({
     methods: {
         changeShowBooks(){
             this.showBooks = !this.showBooks 
+        },
+
+        handleEvent(){
+            console.log("event")
         }
     },
 });
