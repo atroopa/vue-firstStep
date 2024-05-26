@@ -3,6 +3,16 @@
 <head>
     <title>Vue 3 cource </title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     
@@ -17,7 +27,15 @@
             <span v-else>Show Books</span>
         </button>
 
-        <div v-show=showBooks>Showing ...</div>
+        <br>
+        <hr>
+        <br>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
     </div>
 
     <script src="app.js"></script>
