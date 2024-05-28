@@ -5,9 +5,9 @@ const app = Vue.createApp({
             url : "www.google.com",
             showBooks: true,
             books : [
-                {title: "boof koor" , author: "sadegh hedayat"},
-                {title: "chenin goft zartosht" , author: "fredrich niche"},
-                {title: "jenayat o mokafat" , author: "feyodor dastayovsky"},
+                {title: "boof koor" , author: "sadegh hedayat", image: "images/1.jpg"},
+                {title: "chenin goft zartosht" , author: "fredrich niche", image: "images/2.jpg"},
+                {title: "jenayat o mokafat" , author: "feyodor dastayovsky", image: "images/3.jpg"},
             ]
 
         }
