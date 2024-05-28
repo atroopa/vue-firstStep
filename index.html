@@ -18,23 +18,22 @@
     
     <div id="app">
         
+        <a :href="url">google</a>
+
         <div v-if=showBooks>
-            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <ul v-for="book in books">
+                <li>
+                    <h1>{{book.title}}</h1>
+                    <p>{{book.author}}</p>
+                </li>
+            </ul>
+
         </div>
 
         <button @click="changeShowBooks">
             <span v-if=showBooks>Hide Books</span>
             <span v-else>Show Books</span>
         </button>
-
-        <br>
-        <hr>
-        <br>
-
-        <div @mouseover="handleEvent" class="box">mouse over</div>
-        <div @mouseleave="handleEvent" class="box">mouse leave</div>
-        <div @dblclick="handleEvent" class="box">double click</div>
-        <div @mousemove="handleMouseMove" class="box">({{x}}, {{y}})</div>
 
     </div>
 

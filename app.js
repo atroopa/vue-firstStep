@@ -1,27 +1,21 @@
 const app = Vue.createApp({
     data() {
         return {
-            x: 0,
-            y: 0,
+
+            url : "www.google.com",
             showBooks: true,
-            title: "bof koor",
-            author: "sadegh hedayat",
-            age: 45
+            books : [
+                {title: "boof koor" , author: "sadegh hedayat"},
+                {title: "chenin goft zartosht" , author: "fredrich niche"},
+                {title: "jenayat o mokafat" , author: "feyodor dastayovsky"},
+            ]
+
         }
     },
     methods: {
         changeShowBooks(){
             this.showBooks = !this.showBooks 
         },
-
-        handleEvent(e){
-            console.log(e.type)
-        },
-
-        handleMouseMove(e){
-            this.x = e.offsetX
-            this.y = e.offsetY
-        }
     },
 });
 
