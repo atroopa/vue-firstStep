@@ -4,13 +4,10 @@
     <title>Vue 3 cource </title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        .box{
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background: #463c81;
-            margin: 20px;
-            display: inline-block;
+        body{
+            background-color: #eee;
+            max-width: 960px;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -25,7 +22,7 @@
                 <li>
                     <h1>{{book.title}}</h1>
                     <p>{{book.author}}</p>
-                    <img :src="book.image" alt="">
+                    <img :src="book.image" :alt="book.title">
                 </li>
             </ul>
 
