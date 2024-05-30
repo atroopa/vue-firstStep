@@ -5,9 +5,9 @@ const app = Vue.createApp({
             url : "www.google.com",
             showBooks: true,
             books : [
-                {title: "boof koor" , author: "sadegh hedayat", image: "images/1.jpg"},
-                {title: "chenin goft zartosht" , author: "fredrich niche", image: "images/2.jpg"},
-                {title: "jenayat o mokafat" , author: "feyodor dastayovsky", image: "images/3.jpg"},
+                {title: "بوف کور" , author: "صادق هدایت", image: "images/1.jpg", isFav: false},
+                {title: "چنین گفت زرتشت" , author: "فردریش نیچه", image: "images/2.jpg", isFav: true},
+                {title: "جنایت و مکافات" , author: "فئودور داستایفسکی", image: "images/3.jpg", isFav: true},
             ]
 
         }
@@ -16,6 +16,14 @@ const app = Vue.createApp({
         changeShowBooks(){
             this.showBooks = !this.showBooks 
         },
+        changeFav(book){
+            book.isFav = !book.isFav
+        },
+    computed: {
+        filteredBooks(){
+            return "Hello"
+        }
+    }
     },
 });
 

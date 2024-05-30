@@ -9,23 +9,42 @@
             max-width: 960px;
             margin: 20px auto;
         }
+        p, h3, ul {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img{
+            width: 50px;
+            height: 70px;
+        }
+        li.fav{
+            background: #088f72;
+            color: white;
+        }
     </style>
 </head>
 <body>
     
     <div id="app">
-        
-        <a :href="url">google</a>
-
+        <p>{{filteredBooks}}</p>
         <div v-if=showBooks>
             <ul v-for="book in books">
-                <li>
-                    <h1>{{book.title}}</h1>
-                    <p>{{book.author}}</p>
+                <li :class="{fav : book.isFav}" @click="changeFav(book)">
                     <img :src="book.image" :alt="book.title">
+                    <p>{{book.author}}</p>
+                    <h1>{{book.title}}</h1>
                 </li>
             </ul>
-
         </div>
 
         <button @click="changeShowBooks">
