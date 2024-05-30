@@ -19,12 +19,12 @@ const app = Vue.createApp({
         changeFav(book){
             book.isFav = !book.isFav
         },
+    },
     computed: {
         filteredBooks(){
-            return "Hello"
+            return this.books.filter(book => book.isFav)
         }
     }
-    },
 });
 
 
